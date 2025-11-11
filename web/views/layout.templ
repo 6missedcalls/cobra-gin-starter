@@ -1,0 +1,19 @@
+package views
+
+// TODO: Add SEO meta tags, favicon, and other common head elements
+templ Layout(Title string, Description string) {
+	<!DOCTYPE html>
+	<html lang="en" class="dark">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<link href="/static/css/output.css" rel="stylesheet"/>
+			<meta name="description" content={ Description }/>
+			<title>{ Title }</title>
+			<script src="/static/scripts/htmx.min.js"></script>
+		</head>
+		<body class="bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 min-h-screen">
+			{ children... }
+		</body>
+	</html>
+}

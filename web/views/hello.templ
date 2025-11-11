@@ -1,0 +1,13 @@
+package views
+
+templ Hello(Name string) {
+  @Layout("Hello World", "A simple Go, Templ, HTMX, and TailwindCSS example!") {
+    <div class="p-4 rounded-md max-w-7xl">
+      <h2 class="text-7xl font-semibold">Hello, {Name}!</h2>
+      <p class="mt-2 text-neutral-700 dark:text-neutral-300">
+        This is a simple example of a web page built with Go, Templ, HTMX, and TailwindCSS.
+      </p>
+    </div>
+  }
+}
+
