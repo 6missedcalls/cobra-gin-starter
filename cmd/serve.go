@@ -12,7 +12,6 @@ import (
 )
 
 var port      string
-var hotReload bool
 
 var serveCmd = &cobra.Command{
 	Use:   "serve",
@@ -42,7 +41,6 @@ var serveCmd = &cobra.Command{
 
 func init() {
 	serveCmd.Flags().StringVarP(&port, "port", "p", "8080", "Port to run the server on")
-	serveCmd.Flags().BoolVarP(&hotReload, "reload", "r", false, "Enable hot reloading (development only)")
 
 	rootCmd.AddCommand(serveCmd)
 }

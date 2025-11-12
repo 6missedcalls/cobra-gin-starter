@@ -5,7 +5,7 @@
 A modern Go starter template that unifies a **Cobra CLI**, **Gin-powered REST API**, and **Templ + HTMX + TailwindCSS** (GoTTH) web frontend — all served together with a single command.
 
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/6missedcalls/cobra-gin-starter)
-![Go Report Card](https://goreportcard.com/badge/github.com/6missedcalls/cobra-gin-starter)(https://goreportcard.com/report/github.com/6missedcalls/cobra-gin-starter)
+![Go Report Card](https://goreportcard.com/badge/github.com/6missedcalls/cobra-gin-starter)
 ![GitHub License](https://img.shields.io/github/license/6missedcalls/cobra-gin-starter)
 
 ## Features
