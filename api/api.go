@@ -1,9 +1,10 @@
 package api
 
 import (
-	routes "github.com/6missedcalls/cobra-gin-starter/api/routes"
 	"github.com/gin-gonic/gin"
+
 	docs "github.com/6missedcalls/cobra-gin-starter/api/docs"
+	routes "github.com/6missedcalls/cobra-gin-starter/api/routes"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
@@ -11,12 +12,12 @@ import (
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
 
-	v1 := router.Group("/api/v1")
-	docs.SwaggerInfo.BasePath = "/api/v1"
+	const bp = "/api/v1"
+	v1 := router.Group(bp)
+	docs.SwaggerInfo.BasePath = bp
 	routes.RegisterHealthRoutes(v1)
 
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
+	v1.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 
 	return router
 }
-

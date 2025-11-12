@@ -14,8 +14,8 @@ import (
 // @Tags example
 // @Accept json
 // @Produce json
-// @Success 200 {string} Helloworld
-// @Router /example/helloworld [get]
+// @Success 200 {string} healthy
+// @Router /health [get]
 func RegisterHealthRoutes(rg *gin.RouterGroup) {
 	rg.GET("/health", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{

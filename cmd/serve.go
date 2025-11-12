@@ -11,7 +11,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var port string
+var port      string
+var hotReload bool
 
 var serveCmd = &cobra.Command{
 	Use:   "serve",
@@ -30,18 +31,18 @@ var serveCmd = &cobra.Command{
 		mux.Handle("/static/", http.StripPrefix("/static/", staticDir))
 
 		// Pages
-		mux.Handle("/", templ.Handler(views.Hello("User")))
+		mux.Handle("/", templ.Handler(views.Hello()))
 
 		err := http.ListenAndServe(":"+port, mux)
 		if err != nil {
 			log.Fatalf("Failed to start server: %v", err)
 		}
-
 	},
 }
 
 func init() {
 	serveCmd.Flags().StringVarP(&port, "port", "p", "8080", "Port to run the server on")
+	serveCmd.Flags().BoolVarP(&hotReload, "reload", "r", false, "Enable hot reloading (development only)")
 
 	rootCmd.AddCommand(serveCmd)
 }
