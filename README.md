@@ -70,7 +70,7 @@ Start the server (production)
 
 Contributions are always welcome!
 
-See [docs/contributing.md](docs/contributing.md) for ways to get started,
+See [docs/contributing.md](docs/CONTRIBUTING.md) for ways to get started,
 
 ## License
 

@@ -11,7 +11,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var port      string
+var port string
 
 var serveCmd = &cobra.Command{
 	Use:   "serve",
