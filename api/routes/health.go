@@ -5,8 +5,6 @@ import (
 	"net/http"
 )
 
-// @BasePath /api/v1
-
 // PingExample godoc
 // @Summary ping example
 // @Schemes

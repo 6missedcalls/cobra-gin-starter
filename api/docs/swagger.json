@@ -26,6 +26,29 @@
                     }
                 }
             }
+        },
+        "/ws": {
+            "get": {
+                "description": "A simple WebSocket endpoint that sends a greeting message.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "example"
+                ],
+                "summary": "Basic WebSocket Implementation",
+                "responses": {
+                    "101": {
+                        "description": "Switching Protocols",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
         }
     }
 }
