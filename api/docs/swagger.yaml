@@ -16,4 +16,19 @@ paths:
       summary: ping example
       tags:
       - example
+  /ws:
+    get:
+      consumes:
+      - application/json
+      description: A simple WebSocket endpoint that sends a greeting message.
+      produces:
+      - application/json
+      responses:
+        "101":
+          description: Switching Protocols
+          schema:
+            type: string
+      summary: Basic WebSocket Implementation
+      tags:
+      - example
 swagger: "2.0"
